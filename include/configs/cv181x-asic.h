@@ -178,11 +178,11 @@
 #define CONFIG_G_DNL_PRODUCT_NUM 0x4ee0
 #endif
 
-#define CONFIG_IPADDR			192.168.0.3
+#define CONFIG_IPADDR			192.168.1.128
 #define CONFIG_NETMASK			255.255.255.0
-#define CONFIG_GATEWAYIP		192.168.0.11
-#define CONFIG_SERVERIP			192.168.56.101
-#define ROOTFS_DEV	"/dev/mmcblk1p2"
+#define CONFIG_GATEWAYIP		192.168.1.1
+#define CONFIG_SERVERIP			192.168.1.1
+#define ROOTFS_DEV	"/dev/mmcblk0p2"
 
 #ifdef CONFIG_USE_DEFAULT_ENV
 /* The following Settings are chip dependent */
