@@ -182,7 +182,7 @@
 #define CONFIG_NETMASK			255.255.255.0
 #define CONFIG_GATEWAYIP		192.168.1.1
 #define CONFIG_SERVERIP			192.168.1.1
-#define ROOTFS_DEV	"/dev/mmcblk0p2"
+#define ROOTFS_DEV	"/dev/mmcblk0p2"	//rootfs address fix
 
 #ifdef CONFIG_USE_DEFAULT_ENV
 /* The following Settings are chip dependent */
@@ -290,10 +290,11 @@
 	#define SET_BOOTARGS "setenv bootargs ${reserved_mem} ${root} " \
 					"console=$consoledev,$baudrate $othbootargs;"
 
+	/* fix kernel initial address */
 	#define SD_BOOTM_COMMAND \
 				SET_BOOTARGS \
 				"echo Boot from SD with boot.sd;" \
-				"mmc dev 1 && fatload mmc 1 ${uImage_addr} boot.sd; " \
+				"mmc dev 0 && fatload mmc 0 ${uImage_addr} boot.sd; " \
 				"if test $? -eq 0; then " \
 				"echo " UBOOT_VBOOT_BOOTM_COMMAND \
 				UBOOT_VBOOT_BOOTM_COMMAND \
