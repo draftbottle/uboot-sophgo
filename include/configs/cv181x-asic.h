@@ -182,7 +182,7 @@
 #define CONFIG_NETMASK			255.255.255.0
 #define CONFIG_GATEWAYIP		192.168.1.1
 #define CONFIG_SERVERIP			192.168.1.1
-#define ROOTFS_DEV	"/dev/mmcblk0p2"	//rootfs address fix
+#define ROOTFS_DEV			"/dev/mmcblk0p2"
 
 #ifdef CONFIG_USE_DEFAULT_ENV
 /* The following Settings are chip dependent */
