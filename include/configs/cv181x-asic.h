@@ -214,7 +214,7 @@
 			#define ROOTARGS "ubi.mtd=ROOTFS ubi.block=0,0"
 		#endif /* CONFIG_SKIP_RAMDISK */
 	#else
-		#define ROOTARGS "rootfstype=ext4 rootwait ro root=" ROOTFS_DEV
+		#define ROOTARGS "rootfstype=ext4 rootwait rw root=" ROOTFS_DEV
 	#endif
 
 	/* BOOTARGS */
